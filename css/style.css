@@ -1,0 +1,86 @@
+/*Regole generali*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Framework style.css*/
+.dir-col {
+    display: flex;
+    flex-direction: column;
+}
+.dir-row {
+    display: flex;
+}
+.dir-col-just-cont-space-ar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*Fine framework style.css*/
+
+/*Common rules*/
+
+main[class*="main-left"],
+main[class*="main-right"] {
+    float: left;
+    height: 90vh;
+}
+
+/*Fine common rules*/
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: green;
+}
+
+/*MAIN left*/
+
+.main-left {
+    background-color: yellow;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main > nav{
+    width: 90%;
+}
+nav > div[class*="row-logo"], nav > div[class*="row-profile"] {
+    height: 10vh;
+    background-color: turquoise;
+
+}
+
+nav > div[class*=row-nav] {
+    height: 15vh;
+    background-color: tomato;
+    display: flex;
+}
+nav > div[class*="row-playlist"] {
+    height: 55vh;
+    background-color: gold;
+    display: flex;
+}
+
+/*Fine MAIN left*/
+
+/*MAIN right*/
+.main-right {
+    background-color: violet;
+    width: 80%;
+}
+
+/*Fine MAIN right*/
+
+/*FOOTER*/
+footer {
+    height: 10vh;
+    width: 100%;
+    background-color: red;
+    clear: both;
+}
+
+/*Fine FOOTER*/
+
