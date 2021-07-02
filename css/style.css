@@ -1,6 +1,7 @@
 /*Regole generali*/
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 /*Framework style.css*/
@@ -10,6 +11,7 @@
 }
 .dir-row {
     display: flex;
+    align-items: center;
 }
 .dir-col-just-cont-space-ar {
     display: flex;
@@ -20,67 +22,142 @@
 /*Fine framework style.css*/
 
 /*Common rules*/
-
-main[class*="main-left"],
-main[class*="main-right"] {
-    float: left;
-    height: 90vh;
+.container > div {
+    height: calc( 100% - 90px);
 }
+
+
+div > main[class*="main-left"],
+div > main[class*="main-right"] {
+    float: left;
+    height: 100%;
+}
+/*Font-size*/
+.nav-top p{
+    font-size: 15px;
+}
+/*Fine font-size*/
+
+/*Colori common*/
+.color-white {
+    color: white;
+}
+.color-gray {
+    color: gray;
+}
+/*Colori common*/
+
+/*Margini*/
+.m-b20{
+    margin-bottom: 20px;
+}
+.m-b-5{
+    margin-bottom: 5px;
+}
+.m-r5{
+    margin-right: 5px;
+}
+/*Fine Margini*/
+
+/*Padding*/
+.pt-10{
+    padding-top: 10px;
+}
+.pb-5px{
+    padding-bottom: 5px;
+}
+/*Fine padding*/
 
 /*Fine common rules*/
 
 .container {
     width: 100%;
     height: 100vh;
-    background-color: green;
 }
 
 /*MAIN left*/
 
 .main-left {
-    background-color: yellow;
-    width: 20%;
+    background-color: black;
+    width: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+/*Nav*/
 main > nav{
     width: 90%;
+    height: 100%;
 }
-nav > div[class*="row-logo"], nav > div[class*="row-profile"] {
-    height: 10vh;
-    background-color: turquoise;
-
+/*Nav-top*/
+nav > .nav-top{
+    height: calc(100% - 60px);
 }
 
+nav > div[class*="row-logo"]{
+    height: 50px;
+}
+.row-logo a > img{
+    width: 150px;
+}
+/*ROW-NAV*/
 nav > div[class*=row-nav] {
-    height: 15vh;
-    background-color: tomato;
+    height: 60px;
     display: flex;
 }
+.row-nav img{
+    width: 30px;
+}
+/*FINE ROW-NAV*/
+
 nav > div[class*="row-playlist"] {
-    height: 55vh;
-    background-color: gold;
+    height: 200px;
     display: flex;
 }
+
+/*Fine nav-top*/
+
+/*Nav-bottom*/
+.nav-bottom {
+    height: 60px;
+}
+
+/*Fine nav-bottom*/
+
+
+
+
+/*Fine Nav*/
+
 
 /*Fine MAIN left*/
 
 /*MAIN right*/
 .main-right {
     background-color: violet;
-    width: 80%;
+    width: calc(100% - 230px);
 }
 
 /*Fine MAIN right*/
 
 /*FOOTER*/
 footer {
-    height: 10vh;
+    height: 90px;
     width: 100%;
     background-color: red;
-    clear: both;
 }
 
 /*Fine FOOTER*/
 
+/*Media query 600px*/
+@media screen and (max-width: 600px) { 
+    .main-left {
+        width: 100px;
+    }
+    .main-right {
+        width: calc(100% - 100px);
+        
+    }
+    
+}
+/*Fine Media query 600px*/
