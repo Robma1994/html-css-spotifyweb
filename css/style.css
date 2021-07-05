@@ -65,8 +65,14 @@ div > main[class*="main-right"] {
 .m-b-5{
     margin-bottom: 5px;
 }
-.m-b20{
+.m-b10 {
+    margin-bottom: 10px;
+}
+.m-b20 {
     margin-bottom: 20px;
+}
+.m-b35 {
+    margin-bottom: 35px;
 }
 .m-r10{
     margin-right: 10px;
@@ -79,6 +85,12 @@ div > main[class*="main-right"] {
 }
 .m-t-5{
     margin-top: 5px;
+}
+.m-t-30 {
+    margin-top: 30px;
+}
+.m-t20 {
+    margin-top: 20px;
 }
 .m-l10{
     margin-left: 10px;
@@ -220,9 +232,84 @@ nav > div[class*="row-playlist"] {
 
 /*MAIN right*/
 .main-right {
-    background-color: #202020;
-    width: calc(100% - 230px);
+    background-color: #141922;
+    width: calc(100% - 230px);    
 }
+.main-right > .wrapper-main-right {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+.wrapper-main-right > div {
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.upgrade {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(10, 10, 43, 0.6);  
+    display: flex;
+    justify-content: flex-end;
+}
+.button-upgrade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 10px 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 20px 20px;
+}
+.button-upgrade > h3 {
+    color: white;
+    font-size: 15px;
+}
+.wrapper-in-evidenza {
+    width: 95%;
+    margin: 0 auto;
+}
+.choice {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.choice > li {
+    list-style-type: none;
+}
+.choice > li > a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 900;
+}
+.choice a:hover {
+    color: white;
+}
+.album { 
+    display: flex;
+    flex-wrap: wrap;
+}
+.recently {
+    display: flex;
+    justify-content: space-between;
+}
+
+.album img {
+    width: 180px;
+}
+.album div > img+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /*Fine MAIN right*/
 
@@ -275,7 +362,7 @@ footer {
 .footer-center hr {
     background-color: rgba(92, 92, 92, 0.5);
     height: 5px;
-    width: 330px;
+    width: 300px;
     margin-left: 10px;
     margin-right: 10px;
     border: 1px solid rgba(92, 92, 92, 0.2);
@@ -307,7 +394,7 @@ footer {
 .footer-right  hr {
     background-color: rgba(92, 92, 92, 0.5);
     height: 5px;
-    width: 180px;
+    width: 110px;
     margin-right: 10px;
     border: 1px solid rgba(92, 92, 92, 0.2);
     border-radius: 30px 30px;
@@ -315,9 +402,11 @@ footer {
 .footer-right  hr + hr {
     position: absolute;
     bottom: 0;
-    width: 100px;
+    width: 50px;
     background-color: gray;
 }
+
+
 /*Fine footer right*/
 
 /*Fine FOOTER*/
@@ -373,10 +462,21 @@ footer {
         height: 20px;
 
     }
+
+    .upgrade {
+        height: 70px;
+        width: calc(100% - 40px);
+        background-color: rgba(10, 10, 43, 0.6);
+        position: fixed;
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 
     
-}
+
 
 /*Fine Media query 600px*/
