@@ -41,6 +41,7 @@ div > main[class*="main-right"] {
 .fon-siz-10 {
     font-size: 10px;
 }
+
 /*Fine font-size*/
 
 /*Colori common*/
@@ -176,16 +177,22 @@ nav > div[class*=row-nav] {
 .nav-top a:hover {
     color: white;
 }
+
 /*FINE ROW-NAV*/
+
+/*Common row-nav e row-playlist*/
+.nav-top .row-nav img:active {
+    width: 40px;
+    border-left: 3px solid greenyellow;
+}
+/*Fine common row-nav e row-playlist*/
+
 /*Row playlist*/
 nav > div[class*="row-playlist"] {
     height: 100px;
     display: flex;
 }
-.nav-top .row-nav img:active {
-    width: 40px;
-    border-left: 3px solid green;
-}
+
 .nav-top > .row-playlist > div:nth-last-child(1) {
     height: 180px;
     width: 100%;
@@ -249,11 +256,15 @@ nav > div[class*="row-playlist"] {
 }
 .upgrade {
     height: 70px;
-    width: 100%;
+    width: calc(100% - 230px);
     background-color: rgba(10, 10, 43, 0.6);  
     display: flex;
     justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
+
 .button-upgrade {
     display: flex;
     justify-content: center;
@@ -261,8 +272,8 @@ nav > div[class*="row-playlist"] {
     width: 220px;
     height: 25px;
     border: 1px solid white;
-    border-radius: 10px 10px;
-    margin: 10px 10px 10px 10px;
+    border-radius: 20px 20px;
+    margin: 10px 30px 10px 30px;
     padding: 20px 20px;
 }
 .button-upgrade > h3 {
@@ -277,8 +288,9 @@ nav > div[class*="row-playlist"] {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 90px;
     margin-bottom: 20px;
+    height: 20px;
 }
 
 .choice > li {
@@ -287,30 +299,50 @@ nav > div[class*="row-playlist"] {
 .choice > li > a {
     text-decoration: none;
     color: gray;
+    font-size: 15px;
     font-weight: 900;
 }
 .choice a:hover {
     color: white;
 }
+
+.choice > li > hr {
+    display: none;
+}
+.choice > li:hover > hr {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    height: 3px;
+    border: none;
+    background-color: greenyellow;
+}
+
 .album { 
     display: flex;
     flex-wrap: wrap;
 }
 .recently {
     display: flex;
-    justify-content: space-between;
 }
 
 .album img {
     width: 180px;
 }
-.album div > img+div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+div[class*="album"] > .m-r10 > div {
+     width: 180px;
+     text-align: center;
+}
+div[class*="album recently"]> .m-r10 > div > p{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 
+.artisti-popolari img {
+    border-radius: 100px 100px;
+}
 /*Fine MAIN right*/
 
 /*FOOTER*/
@@ -464,19 +496,11 @@ footer {
     }
 
     .upgrade {
-        height: 70px;
         width: calc(100% - 40px);
-        background-color: rgba(10, 10, 43, 0.6);
-        position: fixed;
-        right: 0;
-        top: 0;
-        display: flex;
-        justify-content: flex-end;
     }
 }
 
 
-    
 
 
 /*Fine Media query 600px*/
