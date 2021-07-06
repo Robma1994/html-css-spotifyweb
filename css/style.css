@@ -320,19 +320,18 @@ nav > div[class*="row-playlist"] {
 
 .album { 
     display: flex;
-    flex-wrap: wrap;
 }
 .recently {
     display: flex;
 }
 .album > div {
-    width: calc((100% / 6) -10px);
+    width: calc((100% / 6) - 10px);
 }
 .album > div > img {
     width: 100%;
 }
 div[class*="album"] > .m-r10 > div {
-     width: 180px;
+     width: 100%;
      text-align: center;
 }
 div[class*="album recently"]> .m-r10 > div > p{
@@ -474,7 +473,6 @@ footer {
     
     .footer-center-bottom  hr + hr {
         width: 40px;
-        
     }
 
     .footer-right hr {
@@ -500,9 +498,70 @@ footer {
     .upgrade {
         width: calc(100% - 40px);
     }
+    .album {
+        flex-wrap: wrap;
+    }
+    .album > div {
+        width: calc((100% / 2) - 10px);
+    }
 }
 
+@media screen and (min-width: 601px) {
+    .album {
+        flex-wrap: wrap;
+    }
+    .album > div {
+        width: calc((100% / 2) - 10px);
+    }
+    .footer-center hr {
+        width: 150px;  
+    }
+    
+    .footer-center-bottom  hr + hr {
+        width: 40px;
+    }
 
+    .footer-right hr {
+        width: 80px;  
+    }
+    
+    .footer-right hr + hr {
+        width: 20px;
+        
+    }
+}
 
+@media screen and (min-width: 800px) {
+    .album {
+        flex-wrap: wrap;
+    }
+    .album > div {
+        width: calc((100% / 4) - 10px);
+    }
+}
+@media screen and (min-width: 900px) {
+    .album {
+        flex-wrap: wrap;
+    }
+    .album > div {
+        width: calc((100% / 6) - 10px);
+    }
+    .footer-center hr {
+        width: 330px;  
+    }
+    
+    .footer-center-bottom  hr + hr {
+        width: 40px;
+    }
+
+    .footer-right hr {
+        width: 140px;  
+    }
+    
+    .footer-right hr + hr {
+        width: 20px;
+        
+    }
+}
 
 /*Fine Media query 600px*/
