@@ -325,9 +325,11 @@ nav > div[class*="row-playlist"] {
 .recently {
     display: flex;
 }
-
-.album img {
-    width: 180px;
+.album > div {
+    width: calc((100% / 6) -10px);
+}
+.album > div > img {
+    width: 100%;
 }
 div[class*="album"] > .m-r10 > div {
      width: 180px;
